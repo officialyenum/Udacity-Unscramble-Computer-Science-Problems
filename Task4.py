@@ -14,7 +14,7 @@ def checkIfTeleMarketer(num):
   return False
 
 def checkTeleMarketer(call_list):
-    counter = 0
+    # counter = 0
     for call in call_list:
         if checkIfTeleMarketer(call[0]):
             if call[0] not in recieved_text_checker or call[0] not in sent_text_checker or call[0] not in recieved_call_checker:
