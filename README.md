@@ -1,7 +1,7 @@
 # Udacity-Unscramble-Computer-Science-Problems
 Submission to Udacity's Unscramble Computer Science Problems
 
-# Run time analysis (Worst Case Big-O Notation) of your solution
+Run time analysis (Worst Case Big-O Notation) of your solution
 
 - TASK 0 has a runtime of O(1) as it is not dependent on the input
 - TASK 1 has a runtime of O(2n) as it is dependent on texts and calls list (n + n)
