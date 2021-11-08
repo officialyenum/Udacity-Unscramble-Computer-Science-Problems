@@ -4,7 +4,7 @@ It's ok if you don't understand how to read files.
 """
 import csv
 
-possible_telemarketers = set()
+possible_telemarketers = []
 recieved_text_checker = set()
 sent_text_checker = set()
 recieved_call_checker = set()
@@ -13,7 +13,7 @@ def checkTeleMarketer(call_list):
     # counter = 0
     for call in call_list:
         if call[0] not in recieved_text_checker or call[0] not in sent_text_checker or call[0] not in recieved_call_checker:        
-            possible_telemarketers.add(call[0])
+            possible_telemarketers.append(call[0])
 
 with open('texts.csv', 'r') as f:
     reader = csv.reader(f)
@@ -30,7 +30,7 @@ with open('calls.csv', 'r') as f:
     checkTeleMarketer(calls)
 
 print("These numbers could be telemarketers: ")
-
+possible_telemarketers.sort()
 for marketer in possible_telemarketers:
     print(marketer)
 """
