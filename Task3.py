@@ -4,7 +4,7 @@ It's ok if you don't understand how to read files.
 """
 import csv
 
-area_codes = []
+area_codes = set()
 percentage = 0
 countTwoWayFixedCalls = 0
 countAllCalls = 0
@@ -49,13 +49,12 @@ with open('calls.csv', 'r') as f:
         countTwoWayFixedCalls += 1
       if isBangaloreNumber(call[0]):
         countAllCalls += 1
-        if getCode(call[1]) not in area_codes and isFixedLine(call[1]):
-            area_codes.append(getCode(call[1]))
+        area_codes.add(getCode(call[1]))
 
 
 print("The numbers called by people in Bangalore have codes:")
-area_codes.sort()
-for num in area_codes:
+
+for num in sorted(area_codes):
   print("%s" % num)
 
 

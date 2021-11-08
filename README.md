@@ -38,26 +38,27 @@ Get Time Taken to run using : time python <filename>
 
 - TASK 3 : Worse case complexity: O(n log n)
     - Algorithm:
-        - initialise an empty area codes list (complexity: O(1))
+        - initialise an empty area codes set (complexity: O(1))
         - map through calls list and update area codes(complexity: O(n))
-        - sort area codes using python .sort() (complexity: O(n log n))
-        - print area code (complexity: O(1))
+        - sort area codes using python .sorted() (complexity: O(n log n))
+        - print sorted area code in lexicographic order (complexity: O(1))
         - get percentage (complexity: O(1))
         - print percentage (complexity: O(1))
     - Time Taken to run:
-        - real    0m0.081s
+        - real    0m0.078s
         - user    0m0.042s
-        - sys     0m0.033s
+        - sys     0m0.030s
 
 - TASK 4 : Worse case complexity: O(n log n)
     - Algorithm:
         - initialise an empty text and call checkers set(complexity: O(1))
-        - map through texts to set test checkers(complexity: O(n))
-        - map through calls to set call checkers(complexity: O(n))
-        - map through calls to update possible telemarketers using checkers generated above(complexity: O(n))
-        - sort possible telemarketers using python .sort() (complexity: O(n log n))
-        - print possible telemarketers (complexity: O(1))
+        - map through texts list to set text checkers(complexity: O(n))
+        - map through calls list to set call checkers(complexity: O(n))
+        - map through calls list to update possible telemarketers set using checkers generated above(complexity: O(n))
+        - sort possible telemarketers using python sorted() (complexity: O(n log n))
+        - map through sorted possible telemarketers (complexity: O(n))
+        - print sorted possible telemarketers in lexicographic order (complexity: O(1))
     - Time Taken to run:
-        - real    0m0.243s
-        - user    0m0.057s
-        - sys     0m0.044s
+        - real    0m0.073s
+        - user    0m0.041s
+        - sys     0m0.028s
