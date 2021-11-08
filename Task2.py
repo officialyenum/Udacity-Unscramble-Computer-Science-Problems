@@ -4,8 +4,7 @@ It's ok if you don't understand how to read files
 """
 import csv
 
-max_telephone = None
-max_time = 0
+cummulative_dict = {}
 
 def isSeptember(month):
     if month[3] == "0" and month[4] == "9" and month[6] == "2" and month[7] == "0" and month[8] == "1" and month[9] == "6":
@@ -24,12 +23,18 @@ with open('calls.csv', 'r') as f:
     for call in calls:
         #check if call was made in september 2016
         if isSeptember(call[2]) :
-            #check if time of call is greater than max count
-            if int(call[3]) > max_time:
-                max_telephone = call[0]
-                max_time = int(call[3])
+            #update dictionary number 
+            cummulative_dict[call[0]] = cummulative_dict.get(call[0], 0) + int(call[3])
+            cummulative_dict[call[1]] = cummulative_dict.get(call[1], 0) + int(call[3])
 
-print("%s spent the longest time, %d seconds, on the phone during September 2016." %(max_telephone, max_time))
+
+# From https://pythonguides.com/python-find-max-value-in-a-dictionary/
+# Getting maximum key and values in dictionary
+max_time = max(cummulative_dict.values())
+max_telephone = max(cummulative_dict, key=lambda x: cummulative_dict[x])
+
+# print(cummulative_dict)
+print("%s spent the longest time, %d seconds, on the phone during September 2016." % (max_telephone, max_time))
 
 """
 TASK 2: Which telephone number spent the longest time on the phone
@@ -40,3 +45,9 @@ Print a message:
 September 2016.".
 """
 
+"""
+    set cummulative dictionary set
+    loop through calls sets and update cummulative dictionary set if call was made in september 2016
+    get maximum key and value fro dictionary set
+    return max(unique length set)
+"""
