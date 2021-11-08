@@ -12,9 +12,9 @@ Get Time Taken to run using : time python <filename>
         - get last data in list using index(length of list - 1) or (-1)(complexity: O(1))
         - print resulting string to console(complexity: O(1))
     - Time Taken to run:
-        real    0m0.081s
-        user    0m0.039s
-        sys     0m0.032s
+        - real    0m0.081s
+        - user    0m0.039s
+        - sys     0m0.032s
 
 - TASK 1 : Worse case complexity: O(n)
     - Algorithm:
