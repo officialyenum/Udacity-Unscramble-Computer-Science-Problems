@@ -16,7 +16,7 @@ Get Time Taken to run using : time python <filename>
         user    0m0.039s
         sys     0m0.032s
 
-- TASK 1 : Worst case complexity: O(n)
+- TASK 1 : Worse case complexity: O(n)
     - Algorithm:
         - initialise an empty set(complexity: O(1))
         - map through calls and texts to update set(complexity: O(n))
